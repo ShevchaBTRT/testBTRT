@@ -1,0 +1,261 @@
+{
+  "id": "35332356-c408-4aa5-b63d-2b6e369cf44c",
+  "version": "2.0",
+  "name": "Homework Beetroot",
+  "url": "https://www.rottentomatoes.com/",
+  "tests": [{
+    "id": "25a20830-a8c0-4ae6-9af7-20b300d49b01",
+    "name": "Test case 1",
+    "commands": [{
+      "id": "2e08e690-4539-4074-b6b2-35aa3b8907f4",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.rottentomatoes.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "df501349-6a82-4bb5-b4c5-ea1b48847ae3",
+      "comment": "",
+      "command": "click",
+      "target": "//*[@id=\"masthead-show-login-btn\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6cf4cc4c-5826-40bd-a64d-6dec5323377f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cognito-signup-form__option:nth-child(3)",
+      "targets": [
+        ["css=.cognito-signup-form__option:nth-child(3)", "css:finder"],
+        ["xpath=//rt-button[@value='email']", "xpath:attributes"],
+        ["xpath=//rt-button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6e07fb2-90b6-458a-b40e-a58da18eaa1b",
+      "comment": "",
+      "command": "click",
+      "target": "id=cognito-email-input",
+      "targets": [
+        ["id=cognito-email-input", "id"],
+        ["css=#cognito-email-input", "css:finder"],
+        ["xpath=//input[@id='cognito-email-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "428632c4-3223-44f0-80b4-2d955546a0ee",
+      "comment": "",
+      "command": "type",
+      "target": "id=cognito-email-input",
+      "targets": [],
+      "value": "Shevchanski@gmail.com"
+    }, {
+      "id": "941f698b-555b-4a07-97b0-e64acd394198",
+      "comment": "",
+      "command": "click",
+      "target": "css=.auth-form__button",
+      "targets": [
+        ["css=.auth-form__button", "css:finder"],
+        ["xpath=//auth-signup-screen/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "268ee152-a880-412b-b6ad-ae28a4d863ec",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.js-cognito-error-code",
+      "targets": [
+        ["css=.js-cognito-error-code", "css:finder"],
+        ["xpath=//p[2]", "xpath:position"],
+        ["xpath=//p[contains(.,'Error Code 3')]", "xpath:innerText"]
+      ],
+      "value": "Error Code 3"
+    }, {
+      "id": "f32d41f7-3a6f-4aa8-9dc9-7cb40bedebd6",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.cognito-error__icon--exclamation-circled",
+      "targets": [
+        ["css=.cognito-error__icon--exclamation-circled", "css:finder"],
+        ["xpath=//h2/rt-icon", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "48acb038-d9d4-4664-9171-9e34f155914e",
+    "name": "Test case 2",
+    "commands": [{
+      "id": "82135299-4bc7-4801-8026-11de486df659",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.rottentomatoes.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d49604d6-79be-4555-9b0b-7e34b42cc9ff",
+      "comment": "",
+      "command": "click",
+      "target": "//*[@id=\"header-main\"]/search-algolia/search-algolia-controls/input",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6cffac49-45ac-4086-8de8-115ef4b47f70",
+      "comment": "",
+      "command": "type",
+      "target": "//*[@id=\"header-main\"]/search-algolia/search-algolia-controls/input",
+      "targets": [
+        ["css=.search-text", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//rt-header[@id='header-main']/search-algolia/search-algolia-controls/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Friends"
+    }, {
+      "id": "3c492b68-3a7c-4cfe-ba40-efa7e1575f96",
+      "comment": "",
+      "command": "click",
+      "target": "css=.search-submit > rt-icon",
+      "targets": [
+        ["css=.search-submit > rt-icon", "css:finder"],
+        ["xpath=//rt-header[@id='header-main']/search-algolia/search-algolia-controls/a/rt-icon", "xpath:idRelative"],
+        ["xpath=//a/rt-icon", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb97b47f-f0fb-4da2-af91-e246bfdbdd19",
+      "comment": "",
+      "command": "click",
+      "target": "css=.js-search-filter:nth-child(3) > span",
+      "targets": [
+        ["css=.js-search-filter:nth-child(3) > span", "css:finder"],
+        ["xpath=//div[@id='search-results']/nav/ul/li[3]/span", "xpath:idRelative"],
+        ["xpath=//li[3]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'TV Shows (131)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a37b977b-d3c3-494c-a8ec-4114d0c62f60",
+      "comment": "",
+      "command": "click",
+      "target": "//*[@id=\"search-results\"]/search-page-result[2]/ul/search-page-media-row[1]/a[2]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d0950f02-eaab-4392-a5b1-73a37cf90abb",
+      "comment": "",
+      "command": "assertText",
+      "target": "//*[@id=\"mainColumn\"]/div[2]/h2",
+      "targets": [],
+      "value": "SERIES INFO"
+    }, {
+      "id": "05670ba3-e434-43c3-ad41-c978e3b569c2",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.playButton__img",
+      "targets": [
+        ["css=.playButton__img", "css:finder"],
+        ["xpath=//div[@id='tv-image-section']/button/div/div", "xpath:idRelative"],
+        ["xpath=//button/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "328d62e8-427b-4dfd-a979-a712b7f6b666",
+      "comment": "",
+      "command": "click",
+      "target": "css=.playButton__img",
+      "targets": [
+        ["css=.playButton__img", "css:finder"],
+        ["xpath=//div[@id='tv-image-section']/button/div/div", "xpath:idRelative"],
+        ["xpath=//button/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "736c3628-26de-41ff-920b-814438224407",
+    "name": "Test case 3",
+    "commands": [{
+      "id": "8821c07a-095b-4703-88f5-46e736030bc3",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.rottentomatoes.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "70585ab3-a585-402e-b56a-30350b8ed158",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//*[@id=\"header-main\"]/search-algolia/search-algolia-controls/input",
+      "targets": [
+        ["css=.js-cognito-join-newsletter:nth-child(3)", "css:finder"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "18d09308-4aa1-472d-91f7-9a9d3474f269",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//*[@id=\"header-main\"]/search-algolia/search-algolia-controls/input",
+      "targets": [],
+      "value": "Christopher Nolan"
+    }, {
+      "id": "a310f770-0d46-4150-a8f7-5e40076c6a28",
+      "comment": "",
+      "command": "click",
+      "target": "css=.search-submit > rt-icon",
+      "targets": [
+        ["css=.search-submit > rt-icon", "css:finder"],
+        ["xpath=//rt-header[@id='header-main']/search-algolia/search-algolia-controls/a/rt-icon", "xpath:idRelative"],
+        ["xpath=//a/rt-icon", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce98c405-718c-425a-829f-7cd65b8f2130",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Interstellar",
+      "targets": [
+        ["linkText=Interstellar", "linkText"],
+        ["css=search-page-result:nth-child(2) search-page-media-row:nth-child(5) > .unset:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Interstellar')]", "xpath:link"],
+        ["xpath=//div[@id='search-results']/search-page-result/ul/search-page-media-row[5]/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.rottentomatoes.com/m/interstellar_2014')])[2]", "xpath:href"],
+        ["xpath=//search-page-media-row[5]/a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "383d7fad-ff90-4ed3-862a-3f44a1029f35",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=where-to-watch-meta:nth-child(5) > where-to-watch-bubble",
+      "targets": [
+        ["css=where-to-watch-meta:nth-child(5) > where-to-watch-bubble", "css:finder"],
+        ["xpath=//section[@id='where-to-watch']/bubbles-overflow-container/where-to-watch-meta[5]/where-to-watch-bubble", "xpath:idRelative"],
+        ["xpath=//where-to-watch-meta[5]/where-to-watch-bubble", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c50f9914-4355-41c3-8b05-cac112028202",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "id=main_container",
+      "targets": [
+        ["id=main_container", "id"],
+        ["css=#main_container", "css:finder"],
+        ["xpath=//div[@id='main_container']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]", "xpath:position"]
+      ],
+      "value": "Home Alone"
+    }]
+  }],
+  "suites": [{
+    "id": "205a050e-1ba0-4818-871a-03d84b692ddd",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["25a20830-a8c0-4ae6-9af7-20b300d49b01"]
+  }],
+  "urls": ["https://www.i.ua/", "https://www.rottentomatoes.com/"],
+  "plugins": []
+}
